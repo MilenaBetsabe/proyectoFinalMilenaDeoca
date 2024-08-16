@@ -1,0 +1,48 @@
+footer {
+    margin-top: 15px;
+    background-color: rgba(242, 221, 195, 0.904);
+    color: rgba(0, 0, 0, 0.686);
+    height: auto;
+    padding: 1rem 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+        "logo_los_albores direccion redes";
+    justify-content: space-between;
+    text-align: center;
+    gap: 10px;
+
+    .contenedor-logo-footer {
+        grid-area: logo_los_albores;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .logo_footer {
+            width: 25%;
+            height: 25%; 
+            object-fit: cover;
+        }
+    }
+
+    .direccion {
+        grid-area: direccion;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .instagram_redes {
+        grid-area: redes;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+    }
+
+    .wapp_redes {
+        grid-area: redes;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+    }
+}

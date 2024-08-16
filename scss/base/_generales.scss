@@ -1,0 +1,61 @@
+/*? FONTS **/
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel+Decorative:wght@400;700;900&family=Dancing+Script:wght@400..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+/*!? RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    min-width: 0;
+    border: 0 !important;
+}
+
+/*variables*/
+$primary-color: rgba(242, 221, 195, 0.793);
+$secondary-color: #8a2c17;
+$background-color: rgba(0, 0, 0, 0.7);
+$font-family-base: "Libre Baskerville", serif;
+
+%flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+%transition-standard {
+    transition: all 0.3s ease;
+}
+
+/*mixin & keyframes*/
+@mixin fade-in($duration: 1s, $delay: 0s) {
+    animation: fadeIn $duration ease-in $delay forwards;
+}
+
+@mixin scale-hover($scale: 1.1, $duration: 0.3s) {
+    @extend %transition-standard;
+
+    &:hover {
+        transform: scale($scale);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/*! BODY */
+body {
+    font-family: "Libre Baskerville", serif;
+    background-image: url(../img/fotomasa2.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 120px 20px 0;
+}

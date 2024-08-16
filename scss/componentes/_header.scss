@@ -1,0 +1,74 @@
+header {
+    background-color: rgb(220, 191, 155);
+    height: 100px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    align-items: center;
+    z-index: 100;
+    nav {
+        display: flex;
+        justify-content: space-between;
+        max-width: 992px;
+        margin: 0 auto;
+        height: 100%;
+        .nav-link {
+            color: #8a2c17d5;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .logo {
+            font-family: "Cinzel Decorative", serif;
+            font-size: 35px;
+            font-weight: bold;
+            text-shadow: 1px 1px 1px #35160c;
+            transition: font-size 0.3s, text-shadow 0.3s;
+            padding: 0 35px;
+            line-height: 100px;
+            height: 100%;
+            &:hover {
+                color: #502010;
+                font-size: 36px;
+                text-shadow: 1px 1px 2px black;
+            }
+        }
+        .nav-menu {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            padding: 0;
+        }
+        .nav-menu-item {
+            font-size: 16px;
+            margin: 0 2px;
+            line-height: 110px;
+            width: max-content;
+        }
+        .nav-menu-link {
+            padding: 0 10px;
+            transition: 0.5s;
+            height: 100%;
+            &:hover {
+                color: #502010;
+                font-size: 17px;
+                text-shadow: 1px 1px 2px black;
+            }
+        }
+        .nav-menu-link_active {
+            color: #502010;
+            font-size: 17px;
+            text-shadow: 1px 1px 2px black;
+        }
+        .nav-toggle {
+            color: #502010;
+            background: none;
+            border: none;
+            font-size: 30px;
+            padding: 0 15px;
+            line-height: 60px;
+            cursor: pointer;
+            display: none;
+        }
+    }
+}

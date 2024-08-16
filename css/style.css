@@ -10,6 +10,7 @@
     min-width: 0;
     border: 0 !important;
 }
+
 /*? FIN RESET */
 
 /*! BODY */
@@ -21,20 +22,20 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    padding: 120px 20px 0;
+    padding: 90px 20px 0;
 }
 
 /*! NAV */
 
 header {
     background-color: rgb(220, 191, 155);
-    height: 110px;
+    height: 100px;
     width: 100%;
     position: fixed;
     top: 0;
     left: 0;
     align-items: center;
-    z-index: 100;
+    z-index: 1;
 }
 
 nav {
@@ -42,23 +43,23 @@ nav {
     justify-content: space-between;
     max-width: 992px;
     margin: 0 auto;
-    height: 100%;
+    /* height: 100%; */
 }
 
 .nav-link {
     color: #8a2c17d5;
     text-decoration: none;
-    font-weight:bold;
+    font-weight: bold;
 }
 
 .logo {
     font-family: "Cinzel Decorative", serif;
     font-size: 35px;
-    font-weight:bold;
+    font-weight: bold;
     text-shadow: 1px 1px 1px #35160c;
     transition: font-size 0.3s, text-shadow 0.3s;
-    padding: 0 35px;
-    line-height: 110px;
+    padding: 0 40px;
+    line-height: 100px;
     height: 100%;
 }
 
@@ -73,17 +74,18 @@ nav {
     display: flex;
     align-items: center;
     padding: 0;
+    margin:0;
 }
 
 .nav-menu-item {
     font-size: 16px;
-    margin: 0 2px;
-    line-height: 110px;
+    margin: 0 10px;
+    line-height: 100px;
     width: max-content;
 }
 
 .nav-menu-link {
-    padding: 0 10px;
+    padding: 4px 6px;
     transition: 0.5s;
     height: 100%;
 }
@@ -104,11 +106,77 @@ nav {
     line-height: 60px;
     cursor: pointer;
     display: none;
+    z-index: 1;
 }
+
+@media (max-width: 768px) {
+
+    body {
+        padding-top: 60px;
+    }
+
+    header {
+        height: 60px;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        align-items: center;
+        z-index: 1;
+    }
+
+    .logo {
+        font-family: "Cinzel Decorative", serif;
+        font-size: 25px;
+        padding: 0 20px;
+        line-height: 60px;
+    }
+
+    .nav-menu {
+        list-style: none;
+        margin-right: 40px;
+        display: flex;
+        align-items: center;
+        padding: 0;
+        margin:0;
+    }
+
+    .nav-menu-item {
+        font-size: 16px;
+        margin: 0 10px;
+        line-height: 100px;
+        width: max-content;
+    }
+
+    .nav-menu-link {
+        padding: 4px 6px;
+        transition: 0.5s;
+        height: 100%;
+    }
+
+    .nav-menu-link:hover,
+    .nav-menu-link_active {
+        color: #502010;
+        font-size: 17px;
+        text-shadow: 1px 1px 2px black;
+    }
+
+    .nav-toggle {
+        color: #502010;
+        background: none;
+        border: none;
+        font-size: 30px;
+        padding: 0 15px;
+        line-height: 60px;
+        cursor: pointer;
+        display: none;
+    }
+}
+
 
 @media (max-width: 320px) {
 
-    .contenedor_footer {
+    footer {
         flex-direction: column;
         margin-top: 20px;
     }
@@ -119,7 +187,7 @@ nav {
 
     .contenedor-redes {
         display: flex;
-        justify-content:space-around;
+        justify-content: space-around;
         align-items: center;
     }
 }
@@ -174,16 +242,16 @@ nav {
         left: 0;
     }
 
-    .nav-toggle:focus:not(:focus-visible){
+    .nav-toggle:focus:not(:focus-visible) {
         outline: none;
     }
 
     .card {
-            flex-direction: column; 
-            align-items: center;
-        }
+        flex-direction: column;
+        align-items: center;
     }
-    
+}
+
 
 /*! MAIN */
 
@@ -191,13 +259,20 @@ main {
     color: rgba(242, 221, 195, 0.793) !important;
     text-align: center;
     height: 100%;
+    border-radius: 5px;
+}
+
+
+
+.contenedor-titulo {
+    margin-top: 15px;
 }
 
 main .titulo {
     background-color: rgba(0, 0, 0, 0.553);
-    font-size: 25px;
     border-radius: 5px;
-
+    font-size: 25px;
+    padding: 15px 0;
 }
 
 /**prueba tarjetas*/
@@ -207,16 +282,15 @@ main .titulo {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 10px;
     border-radius: 5px;
 }
 
 .card {
-    width: 325px;
+    width: 250px;
     background-color: #f0f0f0;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
     margin: 20px;
     object-fit: cover;
 }
@@ -232,8 +306,10 @@ main .titulo {
 }
 
 .card-content h3 {
-    font-size: 28px;
-    margin-bottom: 8px;
+    color: #502010;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 0;
 }
 
 .card-content p {
@@ -255,21 +331,28 @@ main .titulo {
 /** NOSOTROS **/
 .contenedor-nosotros {
     background-color: rgba(0, 0, 0, 0.686);
-    margin-top: 30px;
     padding: 2rem;
+    margin-top: 1rem;
+    border-radius: 5px;
     color: rgba(242, 221, 195, 0.904);
     height: 100%;
     display: grid;
     grid-template-columns: 30% 70%;
-    grid-template-rows: 20% 80% 20%;
+    grid-template-rows: 10% 80% 10%;
     grid-template-areas:
-        "tyr historia" 
-        "tyr historia" 
-        "saludo saludo";
+        "tyt titulo"
+        "tyr historia"
+        "tyr saludo";
 }
 
-.contenedor-nosotros h2 {
+.los_albores {
     grid-area: titulo;
+    font-family: "Cinzel Decorative", serif;
+    font-weight: 700;
+    color: #ca623ce4;
+    font-size: 35px;
+    text-shadow: 1px 1px 1px #502010;
+    margin-bottom: 2rem;
 }
 
 .foto-Tyr {
@@ -283,18 +366,12 @@ main .titulo {
     border-radius: 15px;
 }
 
-.los_albores {
-    font-family: "Cinzel Decorative", serif;
-    font-weight: 700;
-    color: #ca623ce4;
-    font-size: 20px;
-    text-shadow: 1px 1px 1px #502010;
-}
+
 
 .historia {
     grid-area: historia;
     font-size: 14px;
-    margin-top: 70px;
+    margin-top: 15px;
 }
 
 .saludo p {
@@ -319,13 +396,15 @@ main .titulo {
         width: 100%;
     }
 }
+
 /** FIN NOSOTROS **/
 
 /** USTEDES **/
 
 .carousel-inner {
     background-color: rgba(0, 0, 0, 0.7);
-    color: rgba(242, 221, 195, 0.793);}
+    color: rgba(242, 221, 195, 0.793);
+}
 
 .carousel-item img {
     display: block;
@@ -389,7 +468,8 @@ main .titulo {
     font-size: 0.9rem;
 }
 
-.formulario_contacto input, .formulario_contacto textarea {
+.formulario_contacto input,
+.formulario_contacto textarea {
     width: 100%;
     padding: 0.5rem;
     border: 1px solid #ccc;
@@ -398,9 +478,10 @@ main .titulo {
     font-size: 0.9rem;
 }
 
-.formulario_contacto input[type="submit"], .formulario_contacto input[type="reset"] {
+.formulario_contacto input[type="submit"],
+.formulario_contacto input[type="reset"] {
     background-color: rgba(242, 221, 195, 0.793);
-    color: #8a2c17;
+    color: #8a2c17 !important;
     font-weight: 700;
     border: none;
     padding: 0.5rem 1rem;
@@ -409,9 +490,10 @@ main .titulo {
     font-size: 0.9rem;
 }
 
-.formulario_contacto input[type="submit"]:hover, .formulario_contacto input[type="reset"]:hover {
+.formulario_contacto input[type="submit"]:hover,
+.formulario_contacto input[type="reset"]:hover {
     background-color: #8a2c17;
-    color: rgba(242, 221, 195, 0.793);
+    color: rgba(242, 221, 195, 0.793) !important;
 }
 
 .mapa_contacto {
@@ -434,7 +516,8 @@ main .titulo {
         align-items: center;
     }
 
-    .formulario_contacto, .mapa_contacto {
+    .formulario_contacto,
+    .mapa_contacto {
         width: 100%;
         margin-bottom: 1rem;
     }
@@ -449,15 +532,75 @@ main .titulo {
         margin-bottom: 1rem;
     }
 
-    .formulario_contacto label, .formulario_contacto input, .formulario_contacto textarea {
+    .formulario_contacto label,
+    .formulario_contacto input,
+    .formulario_contacto textarea {
         width: 100%;
     }
 }
+
+@media (max-width: 320px) {
+
+
+    .contacto {
+        padding: 1rem;
+        margin-top: 20px;
+    }
+
+    .botones_contacto {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .botones_contacto input {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    .formulario_contacto {
+        flex: 1;
+        min-width: 100%;
+    }
+
+    .formulario_contacto form div {
+        margin-bottom: 0.8rem;
+    }
+
+    .formulario_contacto label {
+        font-size: 0.8rem;
+        margin-bottom: 0.4rem;
+    }
+
+    .formulario_contacto input,
+    .formulario_contacto textarea {
+        padding: 0.4rem;
+        font-size: 0.8rem;
+    }
+
+    .formulario_contacto input[type="submit"],
+    .formulario_contacto input[type="reset"] {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+    }
+
+    .mapa_contacto {
+        flex: 1;
+        min-width: 100%;
+        padding: 10px;
+    }
+
+    .mapa_contacto iframe {
+        height: 250px;
+        border-radius: 4px;
+    }
+}
+
 /*? Fin Responsive */
 /** FIN CONTACTO **/
 
 /*! ---- FOOTER ---- */
-.contenedor_footer {
+footer {
+    margin-top: 15px;
     background-color: rgba(242, 221, 195, 0.904);
     color: rgba(0, 0, 0, 0.686);
     height: auto;
@@ -471,16 +614,16 @@ main .titulo {
     gap: 10px;
 }
 
-.contenedor_logo_footer {
+.contenedor-logo-footer {
     grid-area: logo_los_albores;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.contenedor_logo_footer img {
+.contenedor-logo-footer img {
     width: 25%;
-    height: 25%; 
+    height: 25%;
     object-fit: cover;
 }
 
@@ -506,21 +649,21 @@ main .titulo {
 }
 
 footer img {
-    width: 50px; 
-    height: 50px; 
-    border-radius: 15px;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
 }
 
 footer .direccion a {
     text-decoration: none;
     color: rgb(0, 0, 0);
-    font-size: small; 
+    font-size: small;
     font-weight: 700;
 }
 
 /*? Responsive*/
 @media (max-width: 768px) {
-    .contenedor_footer {
+    footer {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(4, auto);
         grid-template-areas:
@@ -531,12 +674,12 @@ footer .direccion a {
     }
 
     .logo_los_albores img {
-        width: 50%; 
-        height: 50%; 
+        width: 50%;
+        height: 50%;
     }
 
     footer img {
-        width: 40px; 
+        width: 40px;
         height: 40px;
     }
 }
@@ -544,15 +687,17 @@ footer .direccion a {
 @media (max-width: 480px) {
     .logo_los_albores img {
         width: 40%;
-        height: 40%; 
+        height: 40%;
     }
-/*? Responsive*/
+
+    /*? Responsive*/
 
     footer img {
-        width: 30px; 
+        width: 30px;
         height: 30px;
     }
 }
+
 /*! ---- FIN FOOTER ---- */
 
 /*? PRODUCTOS*/
@@ -572,12 +717,14 @@ footer .direccion a {
     object-fit: cover;
 }
 
-#pizza, #panes {
+#pizza,
+#panes {
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.7);
 }
 
-#pizza h2, #panes h2 {
+#pizza h2,
+#panes h2 {
     margin-bottom: 20px;
 }
 
@@ -636,7 +783,3 @@ footer .direccion a {
 /*? Fin responsiv */
 
 /*? FIN PRODUCTOS*/
-
-
-
-

@@ -1,0 +1,77 @@
+@media (max-width: 320px) {
+
+    .contenedor_footer {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    .direccion {
+        padding: 10px;
+    }
+
+    .contenedor-redes {
+        display: flex;
+        justify-content:space-around;
+        align-items: center;
+    }
+}
+
+@media (max-width: 819px) {
+    body {
+        padding-top: 70px;
+    }
+
+    header {
+        height: 80px;
+    }
+
+    .logo {
+        font-size: 25px;
+        padding: 0 20px;
+        line-height: 80px;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        align-items: center;
+        margin-right: 20px;
+        background-color: rgb(235, 198, 154);
+        position: fixed;
+        left: 0;
+        top: 80px;
+        width: 100%;
+        padding: 20px 0;
+
+        height: calc(100% - 80px);
+        overflow-y: auto;
+
+        left: 100%;
+        transition: left 0.3s;
+    }
+
+    .nav-menu-item {
+        line-height: 50px;
+    }
+
+    .nav-menu-link:hover,
+    .nav-menu-link_active {
+        color: black;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-menu_visible {
+        left: 0;
+    }
+
+    .nav-toggle:focus:not(:focus-visible){
+        outline: none;
+    }
+
+    .card {
+            flex-direction: column; 
+            align-items: center;
+        }
+    }
