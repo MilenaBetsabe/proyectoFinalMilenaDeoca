@@ -1,9 +1,10 @@
 footer {
+    background-color: rgb(220, 191, 155);
+    height: 200px;
+    width: 100%;
     margin-top: 15px;
-    background-color: rgba(242, 221, 195, 0.904);
-    color: rgba(0, 0, 0, 0.686);
-    height: auto;
-    padding: 1rem 2rem;
+    color: #8a2c17d5;
+    padding: 1rem ;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas:
@@ -11,6 +12,7 @@ footer {
     justify-content: space-between;
     text-align: center;
     gap: 10px;
+    border-radius: 5px;
 
     .contenedor-logo-footer {
         grid-area: logo_los_albores;
@@ -18,9 +20,9 @@ footer {
         align-items: center;
         justify-content: center;
 
-        .logo_footer {
+        img {
             width: 25%;
-            height: 25%; 
+            height: 25%;
             object-fit: cover;
         }
     }
@@ -30,19 +32,47 @@ footer {
         display: flex;
         align-items: center;
         justify-content: center;
+        
+        a {
+            text-decoration: none;
+            color: rgb(0, 0, 0);
+            font-size: small;
+            font-weight: 700;
+        }
     }
 
-    .instagram_redes {
-        grid-area: redes;
+    .contenedor-redes {
         display: flex;
+        justify-content: space-around;
         align-items: center;
-        justify-content: end;
-    }
 
-    .wapp_redes {
-        grid-area: redes;
-        display: flex;
-        align-items: center;
-        justify-content: end;
+        .instagram_redes {
+            grid-area: redes;
+            display: flex;
+            align-items: center;
+            justify-content: end;
+        }
+    
+        .wapp_redes {
+            grid-area: redes;
+            display: flex;
+            align-items: center;
+            justify-content: end;
+        }
+
+        img {
+            width: 50px;
+            height: 50px;
+            border-radius: 5px;
+        }
     }
 }
+
+
+
+
+
+
+
+
+

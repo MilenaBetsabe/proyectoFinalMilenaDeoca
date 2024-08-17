@@ -1,7 +1,4 @@
-/*? FONTS **/
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel+Decorative:wght@400;700;900&family=Dancing+Script:wght@400..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
-
-/*!? RESET */
+// RESET
 * {
     margin: 0;
     padding: 0;
@@ -10,52 +7,45 @@
     border: 0 !important;
 }
 
-/*variables*/
-$primary-color: rgba(242, 221, 195, 0.793);
-$secondary-color: #8a2c17;
-$background-color: rgba(0, 0, 0, 0.7);
-$font-family-base: "Libre Baskerville", serif;
+// BODY STYLES
+body {
+    font-family: $font-primary;
+    background-image: $background-image;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: $color-primary;
 
-%flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include responsive-font-size(16px);
 }
 
-%transition-standard {
-    transition: all 0.3s ease;
-}
+// MIXINS
+@mixin responsive-font-size($size) {
+    font-size: $size;
 
-/*mixin & keyframes*/
-@mixin fade-in($duration: 1s, $delay: 0s) {
-    animation: fadeIn $duration ease-in $delay forwards;
-}
+    @media (max-width: 768px) {
+        font-size: $size * 0.9;
+    }
 
-@mixin scale-hover($scale: 1.1, $duration: 0.3s) {
-    @extend %transition-standard;
-
-    &:hover {
-        transform: scale($scale);
+    @media (max-width: 480px) {
+        font-size: $size * 0.8;
     }
 }
 
+// KEYFRAMES
 @keyframes fadeIn {
-    from {
+    0% {
         opacity: 0;
     }
 
-    to {
+    100% {
         opacity: 1;
     }
 }
 
-/*! BODY */
-body {
-    font-family: "Libre Baskerville", serif;
-    background-image: url(../img/fotomasa2.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    padding: 120px 20px 0;
+// EXTEND
+%flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
