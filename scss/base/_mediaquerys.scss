@@ -1,11 +1,12 @@
 @media (max-width: 819px) {
     body {
         padding-top: 70px;
+        header {
+            height: 80px;
+        }
     }
 
-    header {
-        height: 80px;
-    }
+
 
     .logo {
         font-size: 25px;
@@ -20,7 +21,7 @@
         background-color: rgb(235, 198, 154);
         position: fixed;
         left: 0;
-        top: 80px;
+        top: 60px;
         width: 100%;
         padding: 20px 0;
 
@@ -45,6 +46,7 @@
     }
 
     .nav-menu_visible {
+        /* left: 0; */
         left: 0;
     }
 
@@ -57,6 +59,7 @@
         align-items: center;
     }
 }
+/*? 768px */
 @media (max-width: 768px) {
     .contenedor-nosotros {
         grid-template-columns: 1fr;
@@ -83,7 +86,6 @@
         top: 0;
         left: 0;
         align-items: center;
-        z-index: 1;
     }
 
     .logo {
@@ -104,7 +106,7 @@
 
     .nav-menu-item {
         font-size: 16px;
-        margin: 0 10px;
+        margin: 0 5px;
         line-height: 100px;
         width: max-content;
     }
@@ -165,6 +167,7 @@
         height: auto;
     }
 }
+/*? 480px */
 @media (max-width: 480px) {
     .accordion-button,
     .accordion-body {
@@ -197,6 +200,7 @@
         height: auto;
     }
 }
+/*? 320px */
 @media (max-width: 320px) {
     .contacto {
         padding: 1rem;

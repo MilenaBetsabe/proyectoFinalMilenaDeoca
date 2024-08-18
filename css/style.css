@@ -26,7 +26,7 @@ header {
     top: 0;
     left: 0;
     align-items: center;
-    z-index: 1;
+    z-index: 100 !important;
 }
 
 nav {
@@ -80,7 +80,7 @@ nav {
     line-height: 60px;
     cursor: pointer;
     display: none;
-    z-index: 1;
+    /* z-index: 1; */
 }
 /*! MAIN */
 main {
@@ -463,7 +463,7 @@ footer .direccion a {
         background-color: rgb(235, 198, 154);
         position: fixed;
         left: 0;
-        top: 80px;
+        top: 60px;
         width: 100%;
         padding: 20px 0;
 
@@ -488,6 +488,7 @@ footer .direccion a {
     }
 
     .nav-menu_visible {
+        /* left: 0; */
         left: 0;
     }
 
@@ -527,7 +528,6 @@ footer .direccion a {
         top: 0;
         left: 0;
         align-items: center;
-        z-index: 1;
     }
 
     .logo {
